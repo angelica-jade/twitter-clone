@@ -1,0 +1,91 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Twitter Clone</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="index.css">
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Twitta <i class="fa-brands fa-twitter"></i></h1>
+		</header>
+		<main>
+			<div class="tweet-input-area">
+				<img src="images/bitmojiselfie.png" class="profile-pic">
+				<textarea placeholder="What's happening?" id="tweet-input"></textarea>
+			</div>
+			<button id="tweet-btn">Tweet</button>
+			<div class="feed" id="feed">
+				<!-- Tweets here!! -->
+			</div>
+		</main>
+		<section class="trends">
+			<div class="trends-container">
+				<h2>Trends for you</h2>
+				<p>Trending worldwide</p>
+				<h3>#BreakingNews</h3>
+				<div class="trends-article">
+					<div class="article-container">
+						<span>News</span>
+						<a target="_blank" href="https://www.theonion.com/breaking-the-onion-has-been-permanently-banned-from-tw-1848808405"><p>The Onion Permanently Banned From Twitter</p></a>
+					</div>
+					<img class="article-img" src="/images/onion.webp">
+				</div>
+				<p>1,042 people are Tweeting about this</p>
+			</div>
+			<div class="trends-container">
+				<p>Trending worldwide</p>
+				<h3>#WorldNews</h3>
+				<div class="trends-article">
+					<div class="article-container">
+						<span>News</span>
+						<a target="_blank" href="https://www.theonion.com/report-reveals-jesus-christ-may-have-benefited-from-fat-1833717521"><p>Jesus Christ A 'Nepo Baby'?</p></a>
+					</div>
+					<img class="article-img" src="/images/jesus.webp">
+				</div>
+				<p>8,653 people are Tweeting about this</p>
+			</div>
+			<div class="trends-container">
+				<p>Trending worldwide</p>
+				<h3>#GreatestOfAllTime</h3>
+				<div class="trends-article">
+					<div class="article-container">
+						<span>Animals</span>
+						<a target="_blank" href="https://www.theonion.com/things-all-cats-do-that-prove-they-are-psychopaths-1849592141"><p>Things All Cats Do That Prove They Are Psychopaths</p></a>
+					</div>
+					<img class="article-img" src="/images/cat.webp">
+				</div>
+				<p>12,509 people are Tweeting about this</p>
+			</div>
+		</section>
+		<nav>
+			<div class="icons">
+				<i class="fa-solid fa-house" id="home-icon"></i>
+				<i class="fa-solid fa-search"></i>
+				<i class="fa-regular fa-bell"></i>
+				<i class="fa-regular fa-envelope"></i>
+				<i class="fa-regular fa-bookmark"></i>
+			</div>
+			<div class="icon-labels">
+				<p class="home-label">Home</p>
+				<p>Search</p>
+				<p>Notifications</p>
+				<p>Messages</p>
+				<p>Bookmarks</p>
+			</div>
+		</nav>
+	</div>
+	<script src="index.js" type="module"></script>
+</body>
+</html>

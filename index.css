@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* typography and icons */
+h1{
+    color: #0F8CDF;
+    margin-bottom: .75rem;
+    font-size: 1.5rem;
+}
+
+i{
+    font-size: 1rem;
+    cursor: pointer;
+}
+.fa-twitter{
+    font-size: 1em;
+}
+
+.fa-solid{
+    color: #999;
+}
+
+.liked{
+    color: red;
+}
+
+.retweeted {
+  color: limegreen;
+}
+
+#home-icon,
+.home-label {
+    color: #0F8CDF;
+}
+
+/* layout */
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  
+
+.feed{
+    margin-bottom: 5em;
+}
+
+main, header{
+    width: 25em;
+    margin: 0 auto;
+}
+
+header{
+    padding-bottom: 1.5rem;
+}
+
+.tweet-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+}
+
+/* textareas + btn */
+
+textarea{
+    border: none;
+    resize: none;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+button{
+    background-color: #1DA1F2;
+    border: none;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 20px;
+    width: 100%; 
+    max-width: 20em;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* tweet */
+
+.tweet{
+    border-top: 1px solid lightgray;
+    padding: 2em 0 0 0;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.tweet-inner{
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.tweet-details{
+    display: flex;
+    font-size: .8em;
+    justify-content: space-between;
+    width: 19em;
+}
+
+.tweet-detail{
+    display: flex;
+    gap: .5em;
+}
+
+.tweet-reply{
+    border-top: 1px solid lightgray;
+    padding: 1.4em 0 0 0;
+    margin: .7em 0 .7em 3em;
+    width: 80%;
+}
+
+.handle{
+    font-size: .7em;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+}
+
+.tweet-text{
+    width: 23em;
+    font-size: .9em;
+    line-height: 1.4em;
+}
+
+/* images */
+
+.profile-pic{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 3.5em;
+}
+
+/* utility */
+.hidden{
+    display: none;
+}
+
+.icons > i {
+    font-size: 1.5em;
+    color: gray;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    border-top: .25px solid lightgray;
+}
+
+.trends {
+    display: none;
+}
+
+.icon-labels {
+    display: none;
+}
+
+/* media queries */
+@media (min-width: 660px) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    main{
+        padding: .5em;
+        margin: 2em 0 0 24vw;
+        width: 60%;
+
+    }
+    .tweet-input-area {
+        max-width: 30em;
+    }
+
+    .tweet-text {
+        width: 100%;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 2em;
+    }
+
+    .icons {
+        flex-direction: column;
+        height: 90%; /* Full-height: remove this if you want "auto" height */
+        width: 15%; /* Set the width of the sidebar */
+        min-width: 10em;
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 3em; /* Stay at the top */
+        left: 0;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 3em;
+        border-top: 0;
+        border-right: .25px solid lightgray;
+    }
+}
+
+@media (min-width: 920px) {
+    main {
+        width: 50%;
+        margin-left: 18vw;
+    }
+    .trends-container {
+        border-bottom: .2px solid rgb(228, 226, 226);
+        margin: .5em 0;
+    }
+    
+    .trends-container > h2 {
+        border-bottom: .2px solid rgb(228, 226, 226);
+        padding-bottom: .5em;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+    .trends-container > p {
+        color: grey;
+        font-size: .75em;
+        
+    }
+     
+    .trends {
+        display: flex;
+        flex-direction: column;
+        border-left: .25px solid lightgray;
+        padding: .6em;
+        width: 30%;
+        margin-top: 1em;
+    }
+
+    .trends-container > h3 {
+        margin-bottom: 1em;
+    }
+
+    .article-container > span {
+        color: grey;
+        margin-bottom: 0;
+    }
+
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
+
+    .trends-article {
+        border: 1px solid lightgray;
+        border-radius: 1em;
+        display: flex;
+        height: 8em;
+        justify-content: space-between;
+    }
+
+    .trends > p {
+        font-size: .75em;
+
+    }
+
+    .article-img {
+        width: 7em;
+        height: 8em;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+
+    .article-container {
+        padding: .75em;
+        margin: 0;
+
+    }
+
+} 
+
+@media (min-width: 1310px) {
+    .icon-labels {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 1;
+        height: 90%; /* Full-height: remove this if you want "auto" height */
+        width: 15%; /* Set the width of the sidebar */
+        min-width: 10em;
+        top: 3em; /* Stay at the top */
+        left: 2.5em;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 3em;
+        border-top: 0;
+        font-weight: 600;
+    }
+}
+
