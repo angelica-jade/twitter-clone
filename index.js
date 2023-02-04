@@ -61,7 +61,7 @@ Challenge:
     if(tweetInput.value){
         tweetsData.unshift({
             handle: `@Jelly`,
-            profilePic: `images/bitmojiselfie.png`,
+            profilePic: `bitmojiselfie.png`,
             likes: 0,
             retweets: 0,
             tweetText: tweetInput.value,
